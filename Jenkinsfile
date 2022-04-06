@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Creating Resources') {
             steps {
-                echo 'Hello World'
+                sh("""
+                    python ../aws_python.py
+                """)
             }
         }
     }
