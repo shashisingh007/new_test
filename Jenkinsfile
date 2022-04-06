@@ -5,7 +5,7 @@ pipeline {
         stage('Creating Resources') {
             steps {
                 sh("""
-                    python ../aws_python.py
+                    python aws_python.py
                 """)
             }
         }
